@@ -215,7 +215,7 @@ function aux_retornar_id_elemento_clicando(){
 
 function retornar_id_elemento_clicado() { 
       let id = "";
-      //seleciono todos os elementos da classe desejada
+      //seleciono todos os elementos da classNamee desejada
       document.querySelectorAll(".p2").forEach( function(img) {
       //adiciono listener em todos eles
       img.addEventListener("click", function(event){
@@ -253,8 +253,8 @@ function gerar_personagens_carta(){
     //document.getElementsByClassName("p2")[cb].id = algarismo_aleatorio() + caminho_figura(cartas_tabuleiro[cb]);
     nome = caminho_figura(cartas_tabuleiro[cb]);
     document.getElementsByClassName("p2")[cb].name = nome;
-    //document.getElementsByClassName("p2")[cb].name = caminho_figura(cartas_tabuleiro[cb]);
-    //document.getElementsByClassName("p2")[cb].setAttribute('name', caminho_figura(cartas_tabuleiro[cb]));
+    //document.getElementsByclassName("p2")[cb].name = caminho_figura(cartas_tabuleiro[cb]);
+    //document.getElementsByclassName("p2")[cb].setAttribute('name', caminho_figura(cartas_tabuleiro[cb]));
   }
   //colocar a imagem (ou o numero) correspondente no atributo name de cada carta.
 
@@ -262,7 +262,7 @@ function gerar_personagens_carta(){
   //girar as cartas
   
   //voltar as cartas para o fundo padrão
-  setTimeout(function(){esconder_imagens_cartas()},1000);
+  setTimeout(function(){esconder_imagens_cartas()},1500);
 }
 }
 
@@ -304,7 +304,7 @@ function escolher(cor,numero){
     //efeito de girar a carta
     girar_carta(id);
     document.getElementById(id).style.backgroundColor = cor;
-    document.getElementById(id).innerHTML = '&nbsp;&nbsp;&nbsp;<i class="fa fa-smile-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;';
+    document.getElementById(id).innerHTML = '&nbsp;&nbsp;&nbsp;<i className="fa fa-smile-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;';
     acertos++;
     tentativas = 7;
     pontos++;
@@ -333,13 +333,13 @@ function atualizar(){
 
 function girar_carta(id) {
   document.getElementById(id).className += 'carta-girando-3d ';
-  //document.getElementById(id).setAttribute('class', ' carta-girando-3d '+ document.getElementById(id).className );
-  setTimeout(()=>{document.getElementById(id).className='p2'},2000); //os 2000 têm que ser o mesmo do css da classe
+  //document.getElementById(id).setAttribute('className', ' carta-girando-3d '+ document.getElementById(id).className );
+  setTimeout(()=>{document.getElementById(id).className='p2'},2000); //os 2000 têm que ser o mesmo do css da classNamee
 }
 
 function girar_carta_180(id) {
   document.getElementById(id).className += ' carta-girando-x ';
-  setTimeout(()=>{document.getElementById(id).className='p2'},1000);
+  setTimeout(()=>{document.getElementById(id).className='p2'},2000);
 }
 
 function girar_todas(){
@@ -347,14 +347,14 @@ function girar_todas(){
   //document.getElementsByClassName('p2')[0].className += ' carta-girando-x ';
   document.getElementsByClassName('p2')[a].className += ' carta-girando-x ';
   //setTimeout(()=>{document.getElementsByClassName('carta-girando-x')[0].className ='p2'},1000);
-  setTimeout(()=>{document.getElementsByClassName('carta-girando-x')[a].className ='p2'},1000);
+  setTimeout(()=>{document.getElementsByClassName('carta-girando-x')[a].className ='p2'},2000);
   }
 }
 
 function girar_todas_2(){
   
   document.getElementsByClassName('p2')[0].className = 'carta-girando-x';
-  setTimeout(()=>{document.getElementsByClassName('carta-girando-x')[0].className='p2'},1000);
+  setTimeout(()=>{document.getElementsByClassName('carta-girando-x')[0].className='p2'},2000);
   
 }
 
