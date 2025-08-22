@@ -66,34 +66,34 @@ function mudar_numero_card(){
   }
   switch(numero_selecionado) {
     case numero_selecionado = 0 :
-      document.getElementById("selecionado").innerHTML= "<i className='fa-solid fa-0 fa-5x' aria-hidden='true'></i>";
+      document.getElementById("selecionado").innerHTML= "<i class='fa-solid fa-0 fa-5x' aria-hidden='true'></i>";
       break;
     case numero_selecionado = 1 :
-      document.getElementById("selecionado").innerHTML= "<i className='fa-solid fa-1 fa-5x' aria-hidden='true'></i>";
+      document.getElementById("selecionado").innerHTML= "<i class='fa-solid fa-1 fa-5x' aria-hidden='true'></i>";
       break;
     case numero_selecionado = 2 :
-      document.getElementById("selecionado").innerHTML= "<i className='fa-solid fa-2 fa-5x' aria-hidden='true'></i>";
+      document.getElementById("selecionado").innerHTML= "<i class='fa-solid fa-2 fa-5x' aria-hidden='true'></i>";
       break;
     case numero_selecionado = 3 :
-      document.getElementById("selecionado").innerHTML= "<i className='fa-solid fa-3 fa-5x' aria-hidden='true'></i>";
+      document.getElementById("selecionado").innerHTML= "<i class='fa-solid fa-3 fa-5x' aria-hidden='true'></i>";
       break;
     case numero_selecionado = 4 :
-      document.getElementById("selecionado").innerHTML= "<i className='fa-solid fa-4 fa-5x' aria-hidden='true'></i>";
+      document.getElementById("selecionado").innerHTML= "<i class='fa-solid fa-4 fa-5x' aria-hidden='true'></i>";
       break;
     case numero_selecionado = 5 :
-      document.getElementById("selecionado").innerHTML= "<i className='fa-solid fa-5 fa-5x' aria-hidden='true'></i>";
+      document.getElementById("selecionado").innerHTML= "<i class='fa-solid fa-5 fa-5x' aria-hidden='true'></i>";
       break;
     case numero_selecionado = 6 :
-      document.getElementById("selecionado").innerHTML= "<i className='fa-solid fa-6 fa-5x' aria-hidden='true'></i>";
+      document.getElementById("selecionado").innerHTML= "<i class='fa-solid fa-6 fa-5x' aria-hidden='true'></i>";
       break;
     case numero_selecionado = 7 :
-      document.getElementById("selecionado").innerHTML= "<i className='fa-solid fa-7 fa-5x' aria-hidden='true'></i>";
+      document.getElementById("selecionado").innerHTML= "<i class='fa-solid fa-7 fa-5x' aria-hidden='true'></i>";
       break;
     case numero_selecionado = 8 :
-      document.getElementById("selecionado").innerHTML= "<i className='fa-solid fa-8 fa-5x' aria-hidden='true'></i>";
+      document.getElementById("selecionado").innerHTML= "<i class='fa-solid fa-8 fa-5x' aria-hidden='true'></i>";
       break;
     case numero_selecionado = 9 :
-      document.getElementById("selecionado").innerHTML= "<i className='fa-solid fa-9 fa-5x' aria-hidden='true'></i>";
+      document.getElementById("selecionado").innerHTML= "<i class='fa-solid fa-9 fa-5x' aria-hidden='true'></i>";
       break;
   }
   numero_personagem = numero_selecionado;
@@ -105,34 +105,34 @@ function mudar_numero_card(){
 function caminho_numero(numero){
   switch(numero) {
     case numero = 0 :
-      minhafonte = "<div className='DrWily'></div>";
+      minhafonte = "<div class='DrWily'></div>";
       break;
     case numero = 1 :
-      minhafonte = "<div className='cutman'></div>";
+      minhafonte = "<div class='cutman'></div>";
       break;
     case numero = 2 :
-      minhafonte = "<div className='gutsman'></div>";
+      minhafonte = "<div class='gutsman'></div>";
       break;
     case numero = 3 :
-      minhafonte = "<div className='elecman'></div>";
+      minhafonte = "<div class='elecman'></div>";
       break;
     case numero = 4 :
-      minhafonte = "<div className='iceman'></div>";
+      minhafonte = "<div class='iceman'></div>";
       break;
     case numero = 5 :
-      minhafonte = "<div className='fireman'></div>";
+      minhafonte = "<div class='fireman'></div>";
       break;
     case numero = 6 :
-      minhafonte = "<div className='bombman'></div>";
+      minhafonte = "<div class='bombman'></div>";
       break;
     case numero = 7 :
-      minhafonte = "<div className='roll7'></div>";
+      minhafonte = "<div class='roll7'></div>";
       break;
     case numero = 8 :
-      minhafonte = "<div className='DrLight'></div>";
+      minhafonte = "<div class='DrLight'></div>";
       break;
     case numero = 9 :
-      minhafonte = "<div className='rockman'></div>";
+      minhafonte = "<div class='rockman'></div>";
       break;
   }
   return(minhafonte);
@@ -233,7 +233,7 @@ function errar(idcarta, fonte){
   let id1 = "";
   for ( let i = 0; i < escolhidas.length; i++) {
     id1 = escolhidas[i].id;
-    setTimeout(function(){document.getElementById(id1).innerHTML = '<i className="fa fa-question-circle fa-5x" aria-hidden="true"></i>'},430);
+    setTimeout(function(){document.getElementById(id1).innerHTML = '<i class="fa fa-question-circle fa-5x" aria-hidden="true"></i>'},430);
   }
   escolhidas.pop();
   tentativas--;
@@ -241,7 +241,7 @@ function errar(idcarta, fonte){
   revelar_carta(idcarta, fonte);
   document.getElementById("pontuacao").innerHTML = " " + pontos;
   document.getElementById("tentativas").innerHTML = " " + tentativas;
-  setTimeout(function(){document.getElementById(idcarta).innerHTML = '<i className="fa fa-question-circle fa-5x" aria-hidden="true"></i>'},430);
+  setTimeout(function(){document.getElementById(idcarta).innerHTML = '<i class="fa fa-question-circle fa-5x" aria-hidden="true"></i>'},430);
   atualizar();
 }
 
@@ -302,8 +302,8 @@ function gerar_tabuleiro_cartas() {
   //return(num1);
   //Vou criar um novo vetor com os Ids das cartas do tabuleiro
   var ids = [];
-  for ( i = 0; i < document.getElementsByclassNameName("p2").length; i++) {
-    ids.push( document.getElementsByclassNameName("p2")[i].id);
+  for ( i = 0; i < document.getElementsByClassName("p2").length; i++) {
+    ids.push( document.getElementsByClassName("p2")[i].id);
   }
   let fontes = [];
   for ( i = 0; i < num1.length; i++) {
@@ -328,15 +328,15 @@ function revelar_todas() {
   if (pontos < 12 || tentativas > 0) {
   //revela todas as cartas por um breve momento, depois elas giram e escondem
   let id, fonte = "";
-  for(let i = 0; i < document.getElementsByclassNameName("p2").length; i++) {
-    id = document.getElementsByclassNameName("p2")[i].id;
+  for(let i = 0; i < document.getElementsByClassName("p2").length; i++) {
+    id = document.getElementsByClassName("p2")[i].id;
  
      for(let j = 0; j < colecao_cartas.length; j++) {
        if(id == colecao_cartas[j].id) {
        fonte = colecao_cartas[j].fonte;
-       for(let k = 0; k < document.getElementsByclassNameName("p2").length; k++){
-        if (id == document.getElementsByclassNameName("p2")[k].id ){
-        document.getElementsByclassNameName("p2")[k].innerHTML = fonte;}
+       for(let k = 0; k < document.getElementsByClassName("p2").length; k++){
+        if (id == document.getElementsByClassName("p2")[k].id ){
+        document.getElementsByClassName("p2")[k].innerHTML = fonte;}
         }
      }
    }
@@ -361,7 +361,7 @@ function gerar_personagens_carta(){
   let nome = "";
   for (cb = 0; cb < cartas_tabuleiro.length; cb++) 
   {
-    document.getElementsByclassNameName("p2")[cb].innerHTML = caminho_numero(cartas_tabuleiro[cb]);
+    document.getElementsByClassName("p2")[cb].innerHTML = caminho_numero(cartas_tabuleiro[cb]);
   }
   //colocar a imagem (ou o numero) correspondente no atributo name de cada carta.
 
@@ -376,7 +376,7 @@ function gerar_personagens_carta(){
 function esconder_imagens_cartas(){
  
   for (let cc = 0; cc < 12; cc++){
-    document.getElementsByclassNameName('p2')[cc].innerHTML = '<i className="fa fa-question-circle fa-5x" aria-hidden="true"></i>';
+    document.getElementsByClassName('p2')[cc].innerHTML = '<i class="fa fa-question-circle fa-5x" aria-hidden="true"></i>';
     }
     
 }
@@ -386,46 +386,46 @@ function girar_cards(){
   let el = "";
   for (let a = 0; a < colecao_cartas.length; a++) {
   el = colecao_cartas[a].id;
-  document.getElementById(el).classNameName += ' carta-girando-x ';
+  document.getElementById(el).className += ' carta-girando-x ';
   }
-  for (let d = 0; d < document.getElementsByclassNameName('p2').length; d++) {
-    setTimeout(()=>{document.getElementsByclassNameName('p2')[d].classNameName = ' carta p2 '},2000);
+  for (let d = 0; d < document.getElementsByClassName('p2').length; d++) {
+    setTimeout(()=>{document.getElementsByClassName('p2')[d].className = ' carta p2 '},2000);
   }
 }
 
 
 
 function girar_carta(id) {
-  document.getElementById(id).classNameName += 'carta-girando-3d ';
-  //document.getElementById(id).setAttribute('classNameName', ' carta-girando-3d '+ document.getElementById(id).classNameName );
-  setTimeout(()=>{document.getElementById(id).classNameName='carta p2'},2000); //os 2000 têm que ser o mesmo do css da classNameNamee
+  document.getElementById(id).className += 'carta-girando-3d ';
+  //document.getElementById(id).setAttribute('className', ' carta-girando-3d '+ document.getElementById(id).className );
+  setTimeout(()=>{document.getElementById(id).className='carta p2'},2000); //os 2000 têm que ser o mesmo do css da classNamee
 }
 
 function girar_carta_180(id) {
-  document.getElementById(id).classNameName += ' carta-girando-x ';
-  setTimeout(()=>{document.getElementById(id).classNameName='carta p2'},2000);
+  document.getElementById(id).className += ' carta-girando-x ';
+  setTimeout(()=>{document.getElementById(id).className='carta p2'},2000);
 }
 
 function girar_todas(){
   for (let a = 0; a < 12; a++) {
-  //document.getElementsByclassNameName('p2')[0].classNameName += ' carta-girando-x ';
-  document.getElementsByclassNameName('p2')[a].classNameName += ' carta-girando-x ';
-  //setTimeout(()=>{document.getElementsByclassNameName('carta-girando-x')[0].classNameName ='p2'},1000);
-  setTimeout(()=>{document.getElementsByclassNameName('carta-girando-x')[a].classNameName ='carta p2'},2000);
+  //document.getElementsByclassName('p2')[0].className += ' carta-girando-x ';
+  document.getElementsByClassName('p2')[a].className += ' carta-girando-x ';
+  //setTimeout(()=>{document.getElementsByclassName('carta-girando-x')[0].className ='p2'},1000);
+  setTimeout(()=>{document.getElementsByClassName('carta-girando-x')[a].className ='carta p2'},2000);
   }
 }
 
 
 function parar_de_girar_todas(){
-  for (let i = 0; i < document.getElementsByclassNameName('carta-girando-x').length; i++) {
-    document.getElementsByclassNameName('carta-girando-x')[i].classNameName = 'carta p2';
+  for (let i = 0; i < document.getElementsByClassName('carta-girando-x').length; i++) {
+    document.getElementsByClassName('carta-girando-x')[i].className = 'carta p2';
   }
 }
 
 function girar_todas_2(){
   
-  document.getElementsByclassNameName('p2')[0].classNameName = 'carta-girando-x';
-  setTimeout(()=>{document.getElementsByclassNameName('carta-girando-x')[0].classNameName='carta p2'},2000);
+  document.getElementsByClassName('p2')[0].className = 'carta-girando-x';
+  setTimeout(()=>{document.getElementsByClassName('carta-girando-x')[0].className='carta p2'},2000);
   
 }
 

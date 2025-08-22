@@ -28,21 +28,21 @@
 
 <body onload="iniciar_jogo_memoria()">
 
-  <div className="container-fluid">
-  <div className="largura-limitada centralizada">
+  <div class="container-fluid">
+  <div class="largura-limitada centralizada">
    
     <header>
-      <div className="selecionado container">
+      <div class="selecionado container">
        
           <div>            
-            <div className="painel-acerto" id="acerto">
-              <i className="fa fa-smile-o" aria-hidden="true"></i><span>acertou</span>
+            <div class="painel-acerto" id="acerto">
+              <i class="fa fa-smile-o" aria-hidden="true"></i><span>acertou</span>
             </div>
-            <div className="painel-erro" id="erro">
-              <i className='fas fa-sad-tear fa-fw '></i><span> errou </span>
+            <div class="painel-erro" id="erro">
+              <i class='fas fa-sad-tear fa-fw '></i><span> errou </span>
             </div>
             <div id="reiniciar">
-              <button onclick="reiniciar();" className="btn-primary">REINICIAR</button>
+              <button onclick="reiniciar();" class="btn-primary">REINICIAR</button>
             </div>
           </div>
      </div>
@@ -51,49 +51,49 @@
    
 
    
-    <section className="largura-limitada centralizada">
+    <section class="largura-limitada centralizada">
       <!-- <div><button onclick="revelar_todas();">GIRAR</button></div> -->
     
         
-        <span id="meuid" className="invisivel">&nbsp;</span><span id="meuid2" className="invisivel">&nbsp;</span>
+        <span id="meuid" class="invisivel">&nbsp;</span><span id="meuid2" class="invisivel">&nbsp;</span>
         
     
 
      <!-- Aqui aparecem todas as cartas que serão descobertas  -->
-     <div className="container-novo">
+     <div class="container-novo">
      <div>
-          <div className="cartas-container">
-            <div className="carta p2" onclick="escolher_carta('ca1')" id="ca1" ><i className="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
+          <div class="cartas-container">
+            <div class="carta p2" onclick="escolher_carta('ca1')" id="ca1" ><i class="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
 
-            <div className="carta p2" onclick="escolher_carta('ca2')" id="ca2" ><i className="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
+            <div class="carta p2" onclick="escolher_carta('ca2')" id="ca2" ><i class="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
 
-            <div className="carta p2" onclick="escolher_carta('ca3')" id="ca3" ><i className="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
+            <div class="carta p2" onclick="escolher_carta('ca3')" id="ca3" ><i class="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
 
-            <div className="carta p2" onclick="escolher_carta('ca4')" id="ca4" ><i className="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
+            <div class="carta p2" onclick="escolher_carta('ca4')" id="ca4" ><i class="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
           </div>
 
           <div ><p>&nbsp;</p></div>
 
-          <div className="cartas-container">
-            <div className="carta p2" onclick="escolher_carta('ca5')" id="ca5" ><i className="fa fa-question-circle fa-5x" aria-hidden="true"></i></div>
+          <div class="cartas-container">
+            <div class="carta p2" onclick="escolher_carta('ca5')" id="ca5" ><i class="fa fa-question-circle fa-5x" aria-hidden="true"></i></div>
 
-            <div className="carta p2" onclick="escolher_carta('ca6')" id="ca6" ><i className="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
+            <div class="carta p2" onclick="escolher_carta('ca6')" id="ca6" ><i class="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
 
-            <div className="carta p2" onclick="escolher_carta('ca7')" id="ca7" ><i className="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
+            <div class="carta p2" onclick="escolher_carta('ca7')" id="ca7" ><i class="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
 
-            <div className="carta p2" onclick="escolher_carta('ca8')" id="ca8" ><i className="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
+            <div class="carta p2" onclick="escolher_carta('ca8')" id="ca8" ><i class="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
           </div>
 
           <div ><p>&nbsp;</p></div>
 
-          <div className="cartas-container">
-            <div className="carta p2" onclick="escolher_carta('ca9')" id="ca9" ><i className="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
+          <div class="cartas-container">
+            <div class="carta p2" onclick="escolher_carta('ca9')" id="ca9" ><i class="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
 
-            <div className="carta p2" onclick="escolher_carta('ca10')" id="ca10" ><i className="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
+            <div class="carta p2" onclick="escolher_carta('ca10')" id="ca10" ><i class="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
 
-            <div className="carta p2" onclick="escolher_carta('ca11')" id="ca11" ><i className="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
+            <div class="carta p2" onclick="escolher_carta('ca11')" id="ca11" ><i class="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
 
-            <div className="carta p2" onclick="escolher_carta('ca12')" id="ca12" ><i className="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
+            <div class="carta p2" onclick="escolher_carta('ca12')" id="ca12" ><i class="fa fa-question-circle fa-5x" aria-hidden="true"></i> </div>
           </div>
         </div>
        
@@ -114,7 +114,7 @@
       </div>
       <div >&nbsp;&nbsp;</div>
       
-      <a onclick="revelar_todas()">GIRAR </a>  
+      <a id="btngirar" onclick="revelar_todas()">GIRAR </a>  
 
     </footer>
 

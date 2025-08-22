@@ -1,5 +1,7 @@
+*{box-sizing: border-box;}
+
 .rockman {
-    background-image: url("../imagens/Megaman.png");
+    background-image: url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/Megaman.png");
     background-size: contain;
     background-repeat: no-repeat;
     height: 86px;
@@ -7,7 +9,7 @@
 }
 
 .roll7 {
-    background-image: url("../imagens/roll.png");
+    background-image: url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/roll.png");
     background-size: contain;
     background-repeat: no-repeat;
     height: 86px;
@@ -15,7 +17,7 @@
 }
 
 .cutman {
-    background-image: url("../imagens/cutman_v2.jpeg");
+    background-image: url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/cutman_v2.jpeg");
     background-size: contain;
     background-repeat: no-repeat;
     height: 86px;
@@ -23,7 +25,7 @@
 }
 
 .gutsman {
-    background-image: url("../imagens/gutsman.jpg");
+    background-image: url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/gutsman.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     height: 86px;
@@ -31,7 +33,7 @@
 }
 
 .elecman {
-    background-image: url("../imagens/Elecman.jpg");
+    background-image: url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/Elecman.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     height: 86px;
@@ -40,7 +42,7 @@
 }
 
 .iceman {
-    background-image: url("../imagens/iceman_v1.jpeg");
+    background-image: url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/iceman_v1.jpeg");
     background-size: contain;
     background-repeat: no-repeat;
     height: 86px;
@@ -48,7 +50,7 @@
 }
 
 .fireman {
-    background-image: url("../imagens/fireman.jpg");
+    background-image: url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/fireman.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     height: 86px;
@@ -56,7 +58,7 @@
 }
 
 .bombman {
-    background-image: url("../imagens/bombman.jpg");
+    background-image: url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/bombman.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     height: 86px;
@@ -64,7 +66,7 @@
 }
 
 .DrWily {
-    background-image: url("../imagens/DrWily3.jpg");
+    background-image: url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/DrWily3.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     height: 86px;
@@ -72,7 +74,7 @@
 }
 
 .DrLight {
-    background-image: url("../imagens/Dr_Light_v2.jpeg");
+    background-image: url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/Dr_Light_v2.jpeg");
     background-size: contain;
     background-repeat: no-repeat;
     height: 86px;
@@ -163,6 +165,7 @@ padding:6px;
     margin:1px;
     
 }
+
 
     
 .carta{
@@ -487,4 +490,29 @@ padding:6px;
     to {
         transform:rotateX(360deg);
     }
+}
+
+@media(max-width:425px) {
+    .carta , .p2{
+        padding :0;
+        margin: 0;
+        height:82px;
+        width:82px;
+    }
+
+    .roll7,
+    .rockman,
+    .cutman,
+    .gutsman,
+    .elecman,
+    .bombman,
+    .iceman,
+    .DrLight,
+    .DrWily,
+    .fireman {
+        height:81px;
+        width: 81px;
+    }
+
+
 }
