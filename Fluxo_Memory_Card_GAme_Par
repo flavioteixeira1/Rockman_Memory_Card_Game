@@ -1,0 +1,24 @@
+Este será um jogo da memória tradicional com doze cartas.
+A cada carta será atribuído um número, com uma outra carta correspondente.
+são seis pares de cartas correspondentes.
+No início do jogo todas as cartas são reveladas e logo são ocultadas novamente.
+a idéia é encontrar estes pares.
+ao clicar na carta , ela se revela e você deverá encontrar o  par.
+Caso consiga você pontua (2 pontos - 1 por cada carta) e as cartas permanecem reveladas, senão você perde uma tentativas e as 
+cartas serão ocultadas novamente.
+Se você conseguir revelar todas as cartas (12 pontos) , ganha o jogo.
+
+Fluxo -> 
+
+1    será gerado um vetor com seis posições, sem repetição, com algarismos aleatórios de 0 a 9.vetor cartas1
+
+2    os valores deste vetor serão copiados dentro de outro vetor(vetor cartas2), e depois osíndices deste segundo vetor serão embaralhados.
+
+3    cada carta terá um número atribuído através de seu id (que vai de ca1 até ca12) para uma posição do índice de cada vetor, começando
+pelo vetor cartas1 e depois o cartas2, assim a carta que possui o id ca1 vai receber o índice 0 do vetor cartas1, a carta com o id ca2
+vai receber o índice1 do vetor cartas1 e assim por diante, até que todos os ids das cartas possuam um número atribuído.Isso será feito através de funções
+que vão retornar a valor da posição do índice com um switch.
+
+
+
+
