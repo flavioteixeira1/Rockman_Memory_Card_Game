@@ -13,7 +13,9 @@ just click GIRAR to spin the cards.
 
 Ex:
 
-''' git clone https://github.com/flavioteixeira1/Rockman_Memory_Card_Game.git '''
+''' 
+git clone https://github.com/flavioteixeira1/Rockman_Memory_Card_Game.git 
+'''
 
 Open your browser (chrome, firefox, opera, edge, etc) navigate to Rockman memory Card Game path, and
 drag n drop index.html to your browser (to play game1) , or drag n drop Rockman_Memory_Card_Game_Par.html to your browser
