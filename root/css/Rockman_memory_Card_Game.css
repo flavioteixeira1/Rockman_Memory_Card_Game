@@ -1,7 +1,7 @@
 *{box-sizing: border-box;}
 
 .rockman {
-    background-image: url('images/Megaman.png'),url('/images/Megaman.png'), url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/images/Megaman.png") ;
+    background-image: url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/Megaman.png");
     background-size: contain;
     background-repeat: no-repeat;
     height: 86px;
@@ -9,7 +9,7 @@
 }
 
 .roll7 {
-    background-image: url("/images/roll.png");
+    background-image: url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/roll.png");
     background-size: contain;
     background-repeat: no-repeat;
     height: 86px;
