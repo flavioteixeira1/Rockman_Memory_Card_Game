@@ -143,34 +143,34 @@ function caminho_figura(cor_numero){
     let caminho = "";
     switch(cor_numero){
         case 0:
-            caminho = "imagens/DrWily3.jpg";
+            caminho = "images/DrWily3.jpg";
             break;
         case 1:
-            caminho = "imagens/cutman_v2.jpeg";
+            caminho = "images/cutman_v2.jpeg";
             break;
         case 2:
-            caminho = "imagens/gutsman.jpg";
+            caminho = "images/gutsman.jpg";
             break;
         case 3:
-            caminho = "imagens/Elecman.jpg";
+            caminho = "images/Elecman.jpg";
             break;
         case 4:
-            caminho = "imagens/iceman_v1.jpeg";
+            caminho = "images/iceman_v1.jpeg";
             break;
         case 5:
-            caminho = "imagens/fireman.jpg";
+            caminho = "images/fireman.jpg";
             break;
         case 6:
-            caminho = "imagens/bombman.jpg";
+            caminho = "images/bombman.jpg";
             break;
         case 7:
-            caminho = "imagens/roll.png";
+            caminho = "images/roll.png";
             break;
         case 8: 
-            caminho = "imagens/Dr_Light_v2.jpeg";
+            caminho = "images/Dr_Light_v2.jpeg";
             break;
         case 9:
-            caminho = "imagens/Megaman.png";
+            caminho = "images/Megaman.png";
             break;
     }
     return caminho;

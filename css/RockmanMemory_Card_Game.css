@@ -1,9 +1,118 @@
+*{box-sizing: border-box;}
+
+.rockman {
+    background-image: url('images/Megaman.png'),url('/images/Megaman.png'), url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/Megaman.png") ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 86px;
+    width: 86px;
+}
+
+.roll7 {
+    background-image: url("/images/roll.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 86px;
+    width: 86px;
+}
+
+.cutman {
+    background-image: url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/cutman_v2.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 86px;
+    width: 86px;
+}
+
+.gutsman {
+    background-image: url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/gutsman.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 86px;
+    width: 86px;
+}
+
+.elecman {
+    background-image: url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/Elecman.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 86px;
+    width: 86px;
+
+}
+
+.iceman {
+    background-image: url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/iceman_v1.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 86px;
+    width: 86px;
+}
+
+.fireman {
+    background-image: url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/fireman.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 86px;
+    width: 86px;
+}
+
+.bombman {
+    background-image: url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/bombman.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 86px;
+    width: 86px;
+}
+
+.DrWily {
+    background-image: url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/DrWily3.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 86px;
+    width: 86px;
+}
+
+.DrLight {
+    background-image: url("https://raw.githubusercontent.com/flavioteixeira1/Rockman_Jackpot/98261bebffe6194801ec616cb8f48d3f4ff2c210/imagens/Dr_Light_v2.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 86px;
+    width: 86px;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 299px) {
+    .glyphicon {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 799px) {
+    .glyphicon {
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .glyphicon {
+        font-size: 4.5em;
+    }
+}
 
 .largura-limitada{
     max-width:1080px;
 }
 
 .cartas-container {
+    margin:0;
     max-width: 560px;
     display:flex;
     justify-content: center;
@@ -57,25 +166,32 @@ padding:6px;
     
 }
 
+
     
 .carta{
-    padding:3px;
-    margin:3px;
+    padding:2px;
+    margin:2px;
     width:100px;
     height:100px;
     max-width:158px;
     max-height: 158px;
-    
-    
     display: flex;
     align-self: center;
-    justify-content: center;
+    justify-content: left;
 
+}
+
+.card {
+    object-fit: contain;
+    max-width:120px;
+    max-height:120px;
 }
 
 .carta img{
     object-fit: contain;
     max-width:120px;
+    max-height:120px;
+    
 }
 
 .cores{
@@ -179,20 +295,20 @@ padding:6px;
    
     
     -webkit-animation-name: spin3d;
-    -webkit-animation-duration: 2000ms;
+    -webkit-animation-duration: 3000ms;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
     -moz-animation-name: spin3d;
-    -moz-animation-duration: 2000ms;
+    -moz-animation-duration: 3000ms;
     -moz-animation-iteration-count: infinite;
     -moz-animation-timing-function: linear;
     -ms-animation-name: spin3d;
-    -ms-animation-duration: 2000ms;
+    -ms-animation-duration: 3000ms;
     -ms-animation-iteration-count: infinite;
     -ms-animation-timing-function: linear;
     
     animation-name: spin3d;
-    animation-duration: 2000ms;
+    animation-duration: 3000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
@@ -205,20 +321,20 @@ padding:6px;
     height: 100px;
     background: rgb(0, 17, 255);
     -webkit-animation-name: spin3d;
-    -webkit-animation-duration: 4000ms;
+    -webkit-animation-duration: 4500ms;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
     -moz-animation-name: spin3d;
-    -moz-animation-duration: 4000ms;
+    -moz-animation-duration: 4500ms;
     -moz-animation-iteration-count: infinite;
     -moz-animation-timing-function: linear;
     -ms-animation-name: spin3d;
-    -ms-animation-duration: 4000ms;
+    -ms-animation-duration: 4500ms;
     -ms-animation-iteration-count: infinite;
     -ms-animation-timing-function: linear;
     
     animation-name: spin3d;
-    animation-duration: 4000ms;
+    animation-duration: 4500ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -292,20 +408,20 @@ padding:6px;
 
 
     -webkit-animation-name: spind;
-    -webkit-animation-duration: 2000ms;
+    -webkit-animation-duration: 1800ms;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
     -moz-animation-name: spind;
-    -moz-animation-duration: 2000ms;
+    -moz-animation-duration: 1800ms;
     -moz-animation-iteration-count: infinite;
     -moz-animation-timing-function: linear;
     -ms-animation-name: spind;
-    -ms-animation-duration: 2000ms;
+    -ms-animation-duration: 1800ms;
     -ms-animation-iteration-count: infinite;
     -ms-animation-timing-function: linear;
     
     animation-name: spind;
-    animation-duration: 2000ms;
+    animation-duration: 1800ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
@@ -318,10 +434,6 @@ padding:6px;
 @-moz-keyframes spind {
     from { -moz-transform: rotateY(0deg); }
     to { -moz-transform: rotateY(180deg); }
-}
-@-webkit-keyframes spind {
-    from { -webkit-transform: rotateY(0deg); }
-    to { -webkit-transform: rotateY(180deg); }
 }
 @-webkit-keyframes spind {
     from { -webkit-transform: rotateY(0deg); }
@@ -340,20 +452,20 @@ padding:6px;
    
     
     -webkit-animation-name: spinx;
-    -webkit-animation-duration: 2800ms;
+    -webkit-animation-duration: 3000ms;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
     -moz-animation-name: spinx;
-    -moz-animation-duration: 2800ms;
+    -moz-animation-duration: 3000ms;
     -moz-animation-iteration-count: infinite;
     -moz-animation-timing-function: linear;
     -ms-animation-name: spinx;
-    -ms-animation-duration: 2800ms;
+    -ms-animation-duration: 3000ms;
     -ms-animation-iteration-count: infinite;
     -ms-animation-timing-function: linear;
     
     animation-name: spinx;
-    animation-duration: 2800ms;
+    animation-duration: 3000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
@@ -371,10 +483,6 @@ padding:6px;
     from { -webkit-transform: rotateX(0deg); }
     to { -webkit-transform: rotateX(360deg); }
 }
-@-webkit-keyframes spinx {
-    from { -webkit-transform: rotateX(0deg); }
-    to { -webkit-transform: rotateX(360deg); }
-}
 @keyframes spinx {
     from {
         transform:rotateX(0deg);
@@ -382,4 +490,29 @@ padding:6px;
     to {
         transform:rotateX(360deg);
     }
+}
+
+@media(max-width:425px) {
+    .carta , .p2{
+        padding :0;
+        margin: 0;
+        height:82px;
+        width:82px;
+    }
+
+    .roll7,
+    .rockman,
+    .cutman,
+    .gutsman,
+    .elecman,
+    .bombman,
+    .iceman,
+    .DrLight,
+    .DrWily,
+    .fireman {
+        height:81px;
+        width: 81px;
+    }
+
+
 }

@@ -53,34 +53,34 @@ function mudar_personagem(numero){
 function numero_figura(caminho) {
   let numero = 0;
   switch(caminho){
-    case caminho = "imagens/DrWily3.jpg" :
+    case caminho = "images/DrWily3.jpg" :
         numero = 0;
         break;
-    case caminho = "imagens/cutman_v2.jpeg":
+    case caminho = "images/cutman_v2.jpeg":
         numero = 1;
         break;
-    case caminho = "imagens/gutsman.jpg":
+    case caminho = "images/gutsman.jpg":
         caminho = 2;
         break;
-    case caminho = "imagens/Elecman.jpg":
+    case caminho = "images/Elecman.jpg":
         caminho = 3;
         break;
-    case caminho = "imagens/iceman_v1.jpeg":
+    case caminho = "images/iceman_v1.jpeg":
         numero = 4;
         break;
-    case caminho = "imagens/fireman.jpg":
+    case caminho = "images/fireman.jpg":
         numero = 5;
         break;
-    case caminho = "imagens/bombman.jpg" :
+    case caminho = "images/bombman.jpg" :
         numero = 6;
         break;
-    case caminho = "imagens/roll.png":
+    case caminho = "images/roll.png":
         numero = 7;
         break;
-    case caminho = "imagens/Dr_Light_v2.jpeg":
+    case caminho = "images/Dr_Light_v2.jpeg":
         numero = 8;
         break;
-    case caminho = "imagens/Megaman.png":
+    case caminho = "images/Megaman.png":
         numero = 9;
         break;
   }
@@ -93,34 +93,34 @@ function caminho_figura(cor_numero){
     let caminho = "";
     switch(cor_numero){
         case 0:
-            caminho = "imagens/DrWily3.jpg";
+            caminho = "images/DrWily3.jpg";
             break;
         case 1:
-            caminho = "imagens/cutman_v2.jpeg";
+            caminho = "images/cutman_v2.jpeg";
             break;
         case 2:
-            caminho = "imagens/gutsman.jpg";
+            caminho = "images/gutsman.jpg";
             break;
         case 3:
-            caminho = "imagens/Elecman.jpg";
+            caminho = "images/Elecman.jpg";
             break;
         case 4:
-            caminho = "imagens/iceman_v1.jpeg";
+            caminho = "images/iceman_v1.jpeg";
             break;
         case 5:
-            caminho = "imagens/fireman.jpg";
+            caminho = "images/fireman.jpg";
             break;
         case 6:
-            caminho = "imagens/bombman.jpg";
+            caminho = "images/bombman.jpg";
             break;
         case 7:
-            caminho = "imagens/roll.png";
+            caminho = "images/roll.png";
             break;
         case 8: 
-            caminho = "imagens/Dr_Light_v2.jpeg";
+            caminho = "images/Dr_Light_v2.jpeg";
             break;
         case 9:
-            caminho = "imagens/Megaman.png";
+            caminho = "images/Megaman.png";
             break;
     }
     return caminho;
@@ -164,7 +164,7 @@ function errar(idcarta){
   revelar_carta(idcarta);
   document.getElementById("pontuacao").innerHTML = " " + pontos;
   document.getElementById("tentativas").innerHTML = " " + tentativas;
-  setTimeout(function(){document.getElementById(idcarta).src = "imagens/fundo_carta.jpeg"},380);
+  setTimeout(function(){document.getElementById(idcarta).src = "images/fundo_carta.jpeg"},380);
   atualizar();
 }
 
@@ -269,9 +269,9 @@ function gerar_personagens_carta(){
 function esconder_imagens_cartas(){
  
   for (let cc = 0; cc <= 12;cc++){
-    //document.getElementsByClassName('p2')[0].src = "imagens/fundo_carta.jpeg";
-    document.getElementsByClassName('p2')[cc].src = "imagens/fundo_carta.jpeg";
-    //document.getElementsByClassName('p2')[cc].setAttribute('src',"imagens/fundo_carta.jpeg");
+    //document.getElementsByClassName('p2')[0].src = "images/fundo_carta.jpeg";
+    document.getElementsByClassName('p2')[cc].src = "images/fundo_carta.jpeg";
+    //document.getElementsByClassName('p2')[cc].setAttribute('src',"images/fundo_carta.jpeg");
     }
     
 }
