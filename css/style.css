@@ -4,7 +4,7 @@
 }
 
 .cartas-container {
-    max-width: 560px;
+    max-width: 590px;
     display:flex;
     justify-content: center;
     align-items: stretch;
@@ -35,23 +35,23 @@
     align-self: center;
     
 
-    width:140px;
-    height:140px;
-    max-width:378px;
-    max-height: 378px;
+    width:160px;
+    height:130px;
+    max-width:408px;
+    max-height: 350px;
     overflow: hidden;
 }
 
 #painel-personagem, #painel-resultado{
-margin:8px;
-padding:6px;
+margin:6px;
+padding:5px;
 }
 
 .painel-container {
     display:flex;
     flex-direction: row;
-    width:235px;
-    max-width: 370px;
+    width:285px;
+    max-width: 398px;
     padding: 1px;
     margin:1px;
     
@@ -61,10 +61,10 @@ padding:6px;
 .carta{
     padding:3px;
     margin:3px;
-    width:100px;
-    height:100px;
-    max-width:158px;
-    max-height: 158px;
+    width:95px;
+    height:95px;
+    max-width:140px;
+    max-height: 140px;
     
     
     display: flex;
@@ -323,10 +323,7 @@ padding:6px;
     from { -webkit-transform: rotateY(0deg); }
     to { -webkit-transform: rotateY(180deg); }
 }
-@-webkit-keyframes spind {
-    from { -webkit-transform: rotateY(0deg); }
-    to { -webkit-transform: rotateY(180deg); }
-}
+
 @keyframes spind {
     from {
         transform:rotateY(0deg);
