@@ -14,35 +14,27 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
     
-
-
     <title>Rockman Jogo da memória</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
 
 <body onload="iniciar_jogo_memoria()">
-
   <div class="container-fluid">
-  <div class="largura-limitada centralizada">
-
- <!--Aqui vai o paragrafo de título -->
-    <header>
+    <div class="largura-limitada centralizada">
+      <!--Aqui vai o paragrafo de título -->
+      <header></header>
       
-       
-    </header>
-   
-     <section class="largura-limitada centralizada">
-    <!-- Aqui aparece o personagem selecionado no momento -->
-    <div class="selecionado container">
-        <div  class="carta" onclick="mudar_personagem_carta()" ><img id="selecionado" src="images/fundo_carta.jpeg">
-        
-           <div class="painel-container">
-                <div id="painel-personagem"><p>personagem selecionado </p></div>
-                <div id="painel-resultado"><p>Clique para trocar </p></div>
+      <section class="largura-limitada centralizada">
+        <!-- Aqui aparece o personagem selecionado no momento -->
+        <div class="selecionado-container centralizado">
+          <div class="carta" onclick="mudar_personagem_carta()">
+            <img id="selecionado" src="images/fundo_carta.jpeg">
           </div>
-        </div>
-          <div>            
+          <div class="painel-container">
+            <div id="painel-personagem"><p>personagem selecionado</p></div>
+            <div id="painel-resultado"><p>Clique para trocar</p></div>
+          </div>
+          <div class="painel-status">            
             <div class="painel-acerto" id="acerto">
               <i class="fa fa-smile-o" aria-hidden="true"></i><span>acertou</span>
             </div>
@@ -53,106 +45,53 @@
               <button onclick="location.reload();" class="btn-primary">REINICIAR</button>
             </div>
           </div>
-     </div>
+        </div>
         
         <span id="meuid" class="invisivel">&nbsp;</span><span id="meuid2" class="invisivel">&nbsp;</span>
         
-    
+        <!-- Aqui aparecem todas as cartas que serão descobertas  -->
+        <div class="container-novo">
+          <div>
+            <div class="cartas-container">
+              <div class="carta" > <img src="imagens/fundo_carta.jpeg" class="p2" onclick="escolher_carta('ca1')" name="cartas" id="ca1"> </div>
+              <div class="carta" > <img src="imagens/fundo_carta.jpeg" class="p2" onclick="escolher_carta('ca2')" name="cartas" id="ca2"> </div>
+              <div class="carta"> <img src="imagens/fundo_carta.jpeg" class="p2"  onclick="escolher_carta('ca3')" name="cartas" id="ca3"> </div>
+              <div class="carta"> <img src="imagens/fundo_carta.jpeg" class="p2"  onclick="escolher_carta('ca4')" name="cartas" id="ca4"> </div>
+            </div>
 
-     <!-- Aqui aparecem todas as cartas que serão descobertas  -->
-     <div class="container-novo">
-     <div>
-          <div class="cartas-container">
-            <div class="carta" > <img src="imagens/fundo_carta.jpeg" class="p2" onclick="escolher_carta('ca1')" name="cartas" id="ca1"> </div>
+            <div ><p>&nbsp;</p></div>
 
-            <div class="carta" > <img src="imagens/fundo_carta.jpeg" class="p2" onclick="escolher_carta('ca2')" name="cartas" id="ca2"> </div>
+            <div class="cartas-container">
+              <div class="carta"> <img src="imagens/fundo_carta.jpeg" class="p2" onclick="escolher_carta('ca5')" name="cartas" id="ca5"> </div>
+              <div class="carta"> <img src="imagens/fundo_carta.jpeg" class="p2" onclick="escolher_carta('ca6')" name="cartas" id="ca6"  > </div>
+              <div class="carta"> <img src="imagens/fundo_carta.jpeg" class="p2" onclick="escolher_carta('ca7')" name="cartas" id="ca7" > </div>
+              <div class="carta"> <img src="imagens/fundo_carta.jpeg" class="p2" onclick="escolher_carta('ca8')" name="cartas" id="ca8"> </div>
+            </div>
 
-            <div class="carta"> <img src="imagens/fundo_carta.jpeg" class="p2"  onclick="escolher_carta('ca3')" name="cartas" id="ca3"> </div>
+            <div ><p>&nbsp;</p></div>
 
-            <div class="carta"> <img src="imagens/fundo_carta.jpeg" class="p2"  onclick="escolher_carta('ca4')" name="cartas" id="ca4"> </div>
-          </div>
-
-          <div ><p>&nbsp;</p></div>
-
-          <div class="cartas-container">
-            <div class="carta"> <img src="imagens/fundo_carta.jpeg" class="p2" onclick="escolher_carta('ca5')" name="cartas" id="ca5"> </div>
-
-            <div class="carta"> <img src="imagens/fundo_carta.jpeg" class="p2" onclick="escolher_carta('ca6')" name="cartas" id="ca6"  > </div>
-
-            <div class="carta"> <img src="imagens/fundo_carta.jpeg" class="p2" onclick="escolher_carta('ca7')" name="cartas" id="ca7" > </div>
-
-            <div class="carta"> <img src="imagens/fundo_carta.jpeg" class="p2" onclick="escolher_carta('ca8')" name="cartas" id="ca8"> </div>
-          </div>
-
-          <div ><p>&nbsp;</p></div>
-
-          <div class="cartas-container">
-            <div class="carta"> <img src="imagens/fundo_carta.jpeg" class="p2" onclick="escolher_carta('ca9')" name="cartas" id="ca9" > </div>
-
-            <div class="carta"> <img src="imagens/fundo_carta.jpeg" class="p2" onclick="escolher_carta('ca10')" name="cartas" id="ca10" > </div>
-
-            <div class="carta"> <img src="imagens/fundo_carta.jpeg" class="p2" onclick="escolher_carta('ca11')" name="cartas" id="ca11" > </div>
-
-            <div class="carta"> <img src="imagens/fundo_carta.jpeg" class="p2" onclick="escolher_carta('ca12')" name="cartas" id="ca12" > </div>
+            <div class="cartas-container">
+              <div class="carta"> <img src="imagens/fundo_carta.jpeg" class="p2" onclick="escolher_carta('ca9')" name="cartas" id="ca9" > </div>
+              <div class="carta"> <img src="imagens/fundo_carta.jpeg" class="p2" onclick="escolher_carta('ca10')" name="cartas" id="ca10" > </div>
+              <div class="carta"> <img src="imagens/fundo_carta.jpeg" class="p2" onclick="escolher_carta('ca11')" name="cartas" id="ca11" > </div>
+              <div class="carta"> <img src="imagens/fundo_carta.jpeg" class="p2" onclick="escolher_carta('ca12')" name="cartas" id="ca12" > </div>
+            </div>
           </div>
         </div>
-       
-      </div>
+      </section>
       
-    </section>
-   
-
-    
-    
-
-    <!-- Aqui vai um Dr.Light girando     
-    <div >
-      <img  class="carta-girando-3d" src="imagens/Dr_Light_v2.jpeg"  >
-
-    </div>
-    -->
-
-
-    
-    
-    <!--Aqui vai um painel que mostra as tentativas restantes e a pontuação -->
-    <footer >
-      <div >&nbsp;&nbsp;</div>
-      <div >
-        <div>
-          <span>Tentativas: </span>&nbsp;&nbsp;&nbsp;<span id="tentativas">&nbsp;&nbsp;</span>
-          <span>Pontos: </span>&nbsp;&nbsp;&nbsp;<span id="pontuacao">&nbsp;&nbsp;</span>
+      <!--Aqui vai um painel que mostra as tentativas restantes e a pontuação -->
+      <footer class="container-novo">
+        <div >&nbsp;&nbsp;</div>
+        <div >
+          <div>
+            <span>Tentativas: </span>&nbsp;&nbsp;&nbsp;<span id="tentativas">&nbsp;&nbsp;</span>
+            <span>Pontos: </span>&nbsp;&nbsp;&nbsp;<span id="pontuacao">&nbsp;&nbsp;</span>
+          </div>
         </div>
-      </div>
-      <div >&nbsp;&nbsp;</div>
-      
-
-    </footer>
-
-    <!--
-    <div class="spin-container">
-        <div class="girando3dhorizontal">
-      teste girando
+        <div >&nbsp;&nbsp;</div>
+      </footer>
     </div>
-    
-    <div class="girando2dhorario">
-      teste girando
-    </div>
-
-    
-
-    </div>
-    -->
-
-  
-  
-    
-
-
   </div>
-  
-  </div>
-
 </body>
-
 </html>

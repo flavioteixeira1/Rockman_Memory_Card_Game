@@ -8,6 +8,7 @@ let numero_personagem = 9;
 let caminho1 = "";
 let caminho2 = "";
 let idcarta = "";
+const TEMPO_VISUALIZACAO_CARTAS = 3000; // 3 segundos
 
 
 
@@ -159,13 +160,14 @@ function escolher_carta(id){
 }
 
 function errar(idcarta){
+  atualizar();
   tentativas--;
   aparecer();
   revelar_carta(idcarta);
   document.getElementById("pontuacao").innerHTML = " " + pontos;
   document.getElementById("tentativas").innerHTML = " " + tentativas;
-  setTimeout(function(){document.getElementById(idcarta).src = "images/fundo_carta.jpeg"},380);
-  atualizar();
+  setTimeout(function(){document.getElementById(idcarta).src = "images/fundo_carta.jpeg"},500);
+  
 }
 
 function acertar(idcarta){
@@ -175,7 +177,8 @@ function acertar(idcarta){
   revelar_carta(idcarta);
   document.getElementById("pontuacao").innerHTML = " "+pontos;
   document.getElementById("tentativas").innerHTML = " "+tentativas;
-  atualizar();
+  if(pontos >=12){pontuar();}
+ 
 
 }
 
@@ -258,11 +261,11 @@ function gerar_personagens_carta(){
   }
   //colocar a imagem (ou o numero) correspondente no atributo name de cada carta.
 
-  setTimeout(function(){girar_todas()},150);
+  setTimeout(function(){girar_todas()},500);
   //girar as cartas
   
   //voltar as cartas para o fundo padrão
-  setTimeout(function(){esconder_imagens_cartas()},1500);
+  setTimeout(function(){esconder_imagens_cartas()},TEMPO_VISUALIZACAO_CARTAS);
 }
 }
 
@@ -321,11 +324,12 @@ function escolher(cor,numero){
 
 
 
-
 function atualizar(){
     
-    if (acertos >= 12 || tentativas <= 0) {
+    if (pontos >= 12 || tentativas <= 0 ) {
+      pontuar();
       document.getElementById("reiniciar").style.display = "block";
+     
     }
 
   }
@@ -344,9 +348,7 @@ function girar_carta_180(id) {
 
 function girar_todas(){
   for (let a = 0; a < 12; a++) {
-  //document.getElementsByClassName('p2')[0].className += ' carta-girando-x ';
   document.getElementsByClassName('p2')[a].className += ' carta-girando-x ';
-  //setTimeout(()=>{document.getElementsByClassName('carta-girando-x')[0].className ='p2'},1000);
   setTimeout(()=>{document.getElementsByClassName('carta-girando-x')[a].className ='p2'},2000);
   }
 }
@@ -376,6 +378,15 @@ function aparecer_desaparecer() {
   }, 1500);
 }
 
+function pontuar(){
+  pontos = pontos + (tentativas * 5);
+  document.getElementById("acerto").innerHTML = '<i class="fa-solid fa-face-grin-stars"></i>';
+  document.getElementById("tentativas").innerHTML = '&nbsp;<i className="fa fa-smile-o" aria-hidden="true"></i>&nbsp;';
+  document.getElementById("pontuacao").innerHTML = "Parabéns, você conseguiu " + pontos;
+  verificarVitoria();
+}
+
+
 
 function sleep(milliseconds) {
   const date = Date.now();
@@ -399,3 +410,103 @@ function algarismo_aleatorio(){
   nc = nc.trim();
   return (na+nb+nc);
 }
+
+
+function verificarVitoria() {
+    if (pontos >=12) {
+        setTimeout(efeitoVitoria, 500);
+    }
+}
+
+function efeitoVitoria() {
+    // Efeito de pulsar em todas as cartas
+    const cartas = document.querySelectorAll('.carta');
+    cartas.forEach(carta => {
+        carta.classList.add('pulsar-vitoria');
+        carta.classList.add('brilho-vitoria');
+    });
+    
+    // Efeito de revelação
+    const container = document.querySelector('.container-novo');
+    container.classList.add('revelar-cartas');
+    
+    // Criar confetes
+    criarConfetes();
+    
+    // Mostrar mensagem de vitória
+    mostrarMensagemVitoria();
+}
+
+function criarConfetes() {
+    const container = document.querySelector('.container-fluid');
+    const confeteContainer = document.createElement('div');
+    confeteContainer.className = 'confete-container';
+    confeteContainer.style.position = 'fixed';
+    confeteContainer.style.top = '0';
+    confeteContainer.style.left = '0';
+    confeteContainer.style.width = '100%';
+    confeteContainer.style.height = '100%';
+    confeteContainer.style.pointerEvents = 'none';
+    confeteContainer.style.zIndex = '1000';
+    
+    for (let i = 0; i < 150; i++) {
+        const confete = document.createElement('div');
+        confete.className = 'confete';
+        confete.style.left = Math.random() * 100 + 'vw';
+        confete.style.animationDelay = Math.random() * 3 + 's';
+        confeteContainer.appendChild(confete);
+    }
+    
+    document.body.appendChild(confeteContainer);
+    
+    // Remover confetes após a animação
+    setTimeout(() => {
+        if (confeteContainer.parentNode) {
+            confeteContainer.parentNode.removeChild(confeteContainer);
+        }
+    }, 4000);
+}
+
+function mostrarMensagemVitoria() {
+    const mensagem = document.createElement('div');
+    mensagem.innerHTML = `
+        <div style="
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.9);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            z-index: 1001;
+            border: 3px solid gold;
+            animation: pulsar-vitoria 2s infinite;
+        ">
+            <h2 style="color: gold; margin-bottom: 20px;"> PARABÉNS! </h2>
+            <p style="font-size: 18px; margin-bottom: 15px;">Você venceu o jogo!</p>
+            <p style="font-size: 16px;">Pontuação: ${pontos}</p>
+            <button onclick="this.parentElement.parentElement.remove(); reiniciarJogo();" 
+                    style="margin-top: 15px; padding: 10px 20px; background: gold; border: none; border-radius: 5px; cursor: pointer;">
+                Jogar Novamente
+            </button>
+        </div>
+    `;
+    document.body.appendChild(mensagem);
+}
+
+function reiniciarJogo() {
+    location.reload();
+}
+
+// Modifique a função atualizar para chamar a verificação de vitória
+function atualizar(){
+    if (acertos >= 12 || tentativas <= 0) {
+        document.getElementById("reiniciar").style.display = "block";
+        if (acertos >= 12) {
+            verificarVitoria();
+        }
+    }
+}
+

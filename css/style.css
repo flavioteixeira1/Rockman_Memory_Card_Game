@@ -3,6 +3,15 @@
     max-width:1080px;
 }
 
+.centralizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+
 .cartas-container {
     max-width: 590px;
     display:flex;
@@ -26,35 +35,50 @@
     justify-content: space-between;
 }
 
-.selecionado-container{
-   
-    display:flex;
-    flex-direction: row; 
+.selecionado-container {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
-    align-self: center;
-    
-
-    width:160px;
-    height:130px;
-    max-width:408px;
-    max-height: 350px;
-    overflow: hidden;
+    align-items: center;
+    width: 100%;
+    max-width: 590px; /* Mesma largura máxima das cartas-container */
+    margin: 0 auto;
+    padding: 10px;
+    gap: 15px;
 }
 
+/* Ajuste para a carta selecionada */
+.selecionado-container .carta {
+    width: 95px;
+    height: 95px;
+    margin: 0;
+    padding: 0;
+}
+
+
+
 #painel-personagem, #painel-resultado{
-margin:6px;
-padding:5px;
+    margin: 2px 0;
+    padding: 2px 5px;
+    white-space: nowrap; /* Impede quebra de linha */
 }
 
 .painel-container {
     display:flex;
-    flex-direction: row;
-    width:285px;
-    max-width: 398px;
-    padding: 1px;
-    margin:1px;
+     display: flex;
+    flex-direction: column;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0
     
+}
+
+.painel-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 
     
@@ -87,10 +111,10 @@ padding:5px;
 }
 
 .container-novo {
-    max-width:1030px;
-    display:flex;
-    flex-flow: row;
-    justify-items:center;
+    max-width: 590px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 
 }
 
@@ -380,3 +404,126 @@ padding:5px;
         transform:rotateX(360deg);
     }
 }
+
+
+.efeito-vitoria {
+    position: relative;
+    overflow: hidden;
+}
+
+.confete {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    animation: cair 3s linear forwards;
+}
+
+.confete:nth-child(2n) { background-color: #0f0; }
+.confete:nth-child(3n) { background-color: #00f; }
+.confete:nth-child(4n) { background-color: #ff0; }
+.confete:nth-child(5n) { background-color: #f0f; }
+
+@keyframes cair {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(1000px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.pulsar-vitoria {
+    animation: pulsar 2s infinite;
+}
+
+@keyframes pulsar {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.brilho-vitoria {
+    animation: brilho 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes brilho {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073;
+    }
+    to {
+        box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6;
+    }
+}
+
+.revelar-cartas {
+    animation: revelar 2s ease-out forwards;
+}
+
+@keyframes revelar {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.onda-vitoria {
+    animation: onda 0.5s ease-out;
+}
+
+@keyframes onda {
+    0% {
+        transform: scale(0.5);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+.onda-expansao {
+    position: relative;
+}
+
+.onda-expansao::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,215,0,0.3) 0%, rgba(255,215,0,0) 70%);
+    transform: translate(-50%, -50%);
+    animation: expansao 2s ease-out;
+}
+
+@keyframes expansao {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        width: 200vw;
+        height: 200vw;
+        opacity: 0;
+    }
+}
+
