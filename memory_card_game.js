@@ -500,13 +500,5 @@ function reiniciarJogo() {
     location.reload();
 }
 
-// Modifique a função atualizar para chamar a verificação de vitória
-function atualizar(){
-    if (acertos >= 12 || tentativas <= 0) {
-        document.getElementById("reiniciar").style.display = "block";
-        if (acertos >= 12) {
-            verificarVitoria();
-        }
-    }
-}
+
 
